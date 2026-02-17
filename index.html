@@ -12,7 +12,7 @@
       /* === THEME COLORS === */
       --primary: #1e655e;
       --primary-dark: #144451;
-      --primary-light: #39b5a4;
+      --primary-light: #ACC11F;
 
       --secondary: #e8b550;
       --secondary-dark: #bd7a31;
@@ -80,7 +80,7 @@
       align-items: center;
       gap: 10px;
       box-shadow: inset 0 -3px 0 #0d3d37, 0 6px 12px rgba(0, 60, 50, 0.2);
-      white-space: nowrap;
+      /* white-space: nowrap; */
     }
 
     .ramadan-badge span {
@@ -2170,14 +2170,14 @@
     </svg>
   </span>
   ${streak} day streak
-</div>            <span style="font-weight:600; font-size:1.3rem; color:#17534d;">👋 ${currentUser}</span>
+</div>            <span style="font-weight:600; font-size:1.3rem; color:#17534d;">As-salamu alaykum, ${currentUser}</span>
           `;
           loginArea.innerHTML = `<button class="auth-btn-modern logout" id="logoutBtn">🚪 Logout</button>`;
           document.getElementById('logoutBtn')?.addEventListener('click', logout);
         } else {
           // Not logged in: show ramadan badge + input + login
           greetingBox.innerHTML = `
-            <div class="ramadan-badge">${ramadanDisplay}</div>
+            <div class="ramadan-badge"><span>🕋</span> ${ramadanDisplay}</div>
             <span style="color:#17534d; font-weight:500;">Login to track streak & daily dua</span>
           `;
           loginArea.innerHTML = `
@@ -2269,4 +2269,3 @@
 </body>
 
 </html>
-
